@@ -1,0 +1,49 @@
+# Predator-Prey Simulation Configuration
+
+world:
+  width: 100
+  height: 100
+  seed: 42
+
+grass:
+  initial_density: 0.3      # 初期の草の密度 (0-1)
+  regrowth_rate: 0.05       # 1ステップあたりの再生確率
+  max_density: 0.5          # 最大密度
+
+day_night:
+  cycle_length: 100         # 1日のステップ数
+  day_ratio: 0.6            # 昼の割合 (0-1)
+  herbivore_day_activity: 1.0    # 草食動物の昼の活動倍率
+  herbivore_night_activity: 0.5  # 草食動物の夜の活動倍率
+  carnivore_day_activity: 0.7    # 肉食動物の昼の活動倍率
+  carnivore_night_activity: 1.0  # 肉食動物の夜の活動倍率
+
+herbivore:
+  initial_count: 50
+  max_count: 500            # 個体数上限
+  initial_energy: 50
+  max_energy: 100
+  move_cost: 1              # 移動コスト
+  eat_gain: 20              # 草を食べたときのエネルギー
+  reproduce_threshold: 70   # 繁殖に必要なエネルギー
+  reproduce_cost: 40        # 繁殖時に消費するエネルギー
+  vision_range: 5           # 視野範囲
+  flee_range: 4             # 逃避開始距離（0=逃げない）
+  flee_speed: 1             # 逃走時の追加移動回数
+
+carnivore:
+  initial_count: 20
+  max_count: 200            # 個体数上限
+  initial_energy: 80
+  max_energy: 150
+  move_cost: 2              # 移動コスト（草食より高い）
+  eat_gain: 50              # 草食を食べたときのエネルギー
+  reproduce_threshold: 100  # 繁殖に必要なエネルギー
+  reproduce_cost: 60        # 繁殖時に消費するエネルギー
+  vision_range: 7           # 視野範囲
+  flee_range: 0             # 肉食は逃げない
+  flee_speed: 0
+
+simulation:
+  steps: 1000               # シミュレーションステップ数
+  display_interval: 100     # ログ出力間隔

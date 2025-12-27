@@ -1,0 +1,50 @@
+# Balanced Predator-Prey Configuration
+# より安定した生態系のためのパラメータ（昼夜サイクル・逃避対応）
+
+world:
+  width: 100
+  height: 100
+  seed: 42
+
+grass:
+  initial_density: 0.4
+  regrowth_rate: 0.06       # 再生率（やや控えめ）
+  max_density: 0.55
+
+day_night:
+  cycle_length: 100
+  day_ratio: 0.6
+  herbivore_day_activity: 1.0
+  herbivore_night_activity: 0.5   # 夜はかなり鈍い
+  carnivore_day_activity: 0.8     # 昼も活動
+  carnivore_night_activity: 1.0
+
+herbivore:
+  initial_count: 60
+  max_count: 500
+  initial_energy: 50
+  max_energy: 100
+  move_cost: 1
+  eat_gain: 20
+  reproduce_threshold: 70
+  reproduce_cost: 35
+  vision_range: 5
+  flee_range: 3             # 逃避範囲を控えめに
+  flee_speed: 0             # 追加移動なし（逃げるのに1マスのみ）
+
+carnivore:
+  initial_count: 25         # 初期数を増やす
+  max_count: 180
+  initial_energy: 100
+  max_energy: 180
+  move_cost: 2
+  eat_gain: 70              # 捕食エネルギーを増加
+  reproduce_threshold: 100
+  reproduce_cost: 50
+  vision_range: 6           # 視野を広げる
+  flee_range: 0
+  flee_speed: 0
+
+simulation:
+  steps: 1000
+  display_interval: 100
