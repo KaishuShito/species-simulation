@@ -2,6 +2,8 @@
 
 A simple 2D predator-prey ecosystem simulation built entirely with [Claude Code](https://claude.ai/code).
 
+![Uploading CleanShot 2025-12-27 at 12.12.11.gif…]()
+
 ## Inspiration
 
 This project was inspired by [Import AI #438](https://importai.substack.com/p/import-ai-438-cyber-capability-overhang), where the author describes building a similar simulation with Claude Code in about 5 minutes:
