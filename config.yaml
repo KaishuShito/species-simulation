@@ -28,19 +28,19 @@ herbivore:
   reproduce_threshold: 70   # 繁殖に必要なエネルギー
   reproduce_cost: 40        # 繁殖時に消費するエネルギー
   vision_range: 5           # 視野範囲
-  flee_range: 4             # 逃避開始距離（0=逃げない）
-  flee_speed: 1             # 逃走時の追加移動回数
+  flee_range: 3             # 逃避開始距離（0=逃げない）
+  flee_speed: 0             # 逃走時の追加移動回数
 
 carnivore:
-  initial_count: 20
+  initial_count: 25
   max_count: 200            # 個体数上限
-  initial_energy: 80
+  initial_energy: 100
   max_energy: 150
   move_cost: 2              # 移動コスト（草食より高い）
-  eat_gain: 50              # 草食を食べたときのエネルギー
+  eat_gain: 70              # 草食を食べたときのエネルギー
   reproduce_threshold: 100  # 繁殖に必要なエネルギー
   reproduce_cost: 60        # 繁殖時に消費するエネルギー
-  vision_range: 7           # 視野範囲
+  vision_range: 6           # 視野範囲
   flee_range: 0             # 肉食は逃げない
   flee_speed: 0
 
